@@ -14,5 +14,5 @@ q.pack(side=LEFT)
 
 hi = Button(frame, text="Hello", command=say_hi)
 hi.pack(side=RIGHT)
-
+root.geometry("500x500")
 root.mainloop()
