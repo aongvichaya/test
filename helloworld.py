@@ -13,6 +13,6 @@ q = Button(frame, text="QUIT", fg="red", command=frame.quit)
 q.pack(side=LEFT)
 
 hi = Button(frame, text="Hello", command=say_hi)
-hi.pack(side=LEFT)
+hi.pack(side=RIGHT)
 
 root.mainloop()
