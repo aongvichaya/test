@@ -6,7 +6,7 @@ def say_hi():
 
 root = Tk()
 
-frame = Frame(root,height=5, background=green, bd=3)
+frame = Frame(root,height=5, bg="red", bd=3)
 frame.pack()
 
 q = Button(frame, text="QUIT", fg="red", command=frame.quit)
