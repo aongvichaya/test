@@ -1,18 +1,14 @@
-from tkinter import *
+import maya.cmds as cmds
 
+MyLabel = 'My Panel'
+cmds.window()
+cmds.frameLayout( lv=0 )
+cmds.modelPanel( l=MyLabel )
+cmds.showWindow()
 
-def say_hi():
-    print("hi there, everyone!")
+panels = cmds.getPanel( all=True )
 
-root = Tk()
-
-frame = Frame(root,height=5, bg="red", bd=3)
-frame.pack()
-
-q = Button(frame, text="QUIT", fg="red", command=frame.quit)
-q.pack(side=LEFT)
-
-hi = Button(frame, text="Hello", command=say_hi)
-hi.pack(side=RIGHT)
-root.geometry("500x500")
-root.mainloop()
+for panel in panels:
+	if MyLabel == cmds.panel( panel, q=True, label=True ):
+		myPanel = panel
+		print( 'Found: '+MyLabel )
